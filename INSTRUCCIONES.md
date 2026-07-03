@@ -1,49 +1,39 @@
-# Instalar el chat de Porthos en tu página web
+# Integrar el asistente virtual de Porthos en la página web
 
-El chat aparece como un botón flotante abajo a la derecha. No requiere servidor,
-no afecta el diseño de tu web y funciona en cualquier plataforma (HTML, WordPress,
-Wix, Squarespace, Shopify, etc.).
+Les comparto el archivo y los pasos para integrar el asistente virtual **Porthos**
+en la página web del restaurante.
 
-**Solo hay que pegar el código justo antes de la etiqueta `</body>` de tu página.**
+## Archivo adjunto
 
----
+1. **porthos-chat-widget.html** — código del widget (el logo ya va incrustado, no
+   hace falta subir ninguna imagen aparte).
 
-## Opción A — Una sola línea (recomendada)
+## Pasos
 
-Pega esta línea antes de `</body>`:
+1. Abrir **porthos-chat-widget.html** con cualquier editor de texto y copiar **todo**
+   su contenido.
 
-```html
-<script src="https://porthos-web.vercel.app/porthos-chat.js" defer></script>
-```
+2. Pegarlo en el template HTML del sitio, justo antes de la etiqueta de cierre
+   `</body>`.
 
-> Reemplaza `porthos-web.vercel.app` por el dominio donde está publicado el archivo
-> `porthos-chat.js`, si es distinto.
+3. Publicar el cambio. El botón del chat aparecerá automáticamente en todas las
+   páginas donde esté ese template, abajo a la derecha.
 
-Ventaja: si más adelante se mejora el chat, se actualiza solo sin volver a tocar la web.
-
----
-
-## Opción B — Bloque completo (sin depender de nada externo)
-
-Si prefieres no enlazar a un archivo externo, abre `porthos-chat-embed.html`,
-copia **todo** su contenido y pégalo antes de `</body>`. Ya trae el logo incrustado,
-así que no necesita subir ninguna imagen aparte.
+> **Nota:** Si después de la integración el chat no responde, por favor informarme.
 
 ---
 
-## ¿Dónde lo pego según mi plataforma?
+## Dónde se pega según la plataforma
 
-- **HTML propio:** antes de `</body>` en tu plantilla/página.
+- **HTML propio:** antes de `</body>` en la plantilla del sitio.
 - **WordPress:** Apariencia → Editor de tema → `footer.php` (antes de `</body>`),
   o un plugin tipo "Insert Headers and Footers" (sección Footer).
-- **Wix / Squarespace:** agrega un bloque de "Código personalizado / Embed HTML"
-  en el footer del sitio.
+- **Wix / Squarespace:** un bloque de "Código personalizado / Embed HTML" en el footer.
 - **Shopify:** `theme.liquid`, justo antes de `</body>`.
 
----
+## Ventajas de este widget
 
-## Notas
-
-- No pide instalar nada ni pagar hosting; el chat se conecta solo.
-- No modifica los estilos ni el contenido de tu página (va aislado).
-- Para probar: guarda, recarga la web y haz clic en el botón de abajo a la derecha.
+- **No requiere subir imágenes** ni reemplazar ninguna URL: el logo va dentro del código.
+- **No daña el diseño del sitio:** va aislado (Shadow DOM), no afecta colores, fuentes ni
+  estilos de la página.
+- **No requiere instalar ni pagar hosting:** el chat se conecta solo al asistente.
